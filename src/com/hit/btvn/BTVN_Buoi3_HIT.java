@@ -114,9 +114,18 @@ public class BTVN_Buoi3_HIT {
 	}
 	
 	//Kiểm tra đối xứng
-//	static boolean KiemTraDoiXung(String str) {
-//		int left
-//	}
+	static boolean DoiXung(String str) {
+		int right = str.length()-1;
+		int left = 0;
+		while(left < right) {
+			if(str.charAt(left) != str.charAt(right)) {
+				return false;
+			}
+			left++;
+			right--;
+		}
+		return true;	
+	}
 	
 	
 	public static void main(String[] args) {
@@ -164,8 +173,13 @@ public class BTVN_Buoi3_HIT {
 //		XuatMang(arr);
 		
 		//Kiểm tra chuỗi đối xứng
-//		System.out.println("Nhap chuoi bat ky: ");
-//		String str = input.nextLine();
+		System.out.println("Nhap chuoi bat ky: ");
+		String str = input.nextLine();
+		if(DoiXung(str)) {
+			System.out.println("Chuoi tren doi xung");
+		}else {
+			System.out.println("Khong doi xung!");
+		}
 		
 		
 	}
